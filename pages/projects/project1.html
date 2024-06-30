@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== FAVICON ===============-->
+
+
+    <!--=============== BOXICONS ===============-->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="../../assets/css/swiper-bundle.min.css">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+
+    <title> Uday's Portfolio </title>
+</head>
+
+<style>
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+    width: 120px;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+.tooltip .tooltiptext {
+   /* Use half of the width (120/2 = 60), to center the tooltip */
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+/* Sine wave canvas */
+#sineWaveCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background-color: rgba(30, 30, 30, 0.9);
+}
+</style>
+
+<body>
+    <canvas id="sineWaveCanvas"></canvas>
+
+    <!--=============== HEADER ===============-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            
+            <a href="#" class="nav__logo" >Tadipatri Uday Kiran Reddy</a>
+            
+
+            
+
+            <!--=============== Dark mode and Light mode convertor ===============-->
+            <i class='bx bx-moon change-theme change-theme-button' id="theme-button"></i>
+
+        </nav>
+    </header>
+
+    <!--=============== MAIN ===============-->
+    <main class="main">
+        <!--=============== HOME ===============-->
+        <section class="home section" id="home">
+            <div class="home__container container grid">
+                <div class="home__data">
+                    <h1 class="home__name" style="font-size: 50px;">Project</h1>
+                </div>
+
+
+
+                <div class="home__social">
+                    <a href="https://www.linkedin.com/in/tadipatri-uday-kiran-reddy/" target="_blank" class="home__social-link">
+                        <i class='bx bxl-linkedin'></i>
+                    </a>
+                    <a href="https://github.com/TUdayKiranReddy" target="_blank" class="home__social-link">
+                        <i class='bx bxl-github'></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!--=============== ABOUT ===============-->
+        <section class="about section" id="about">
+            <h2 class="section__title">Heading</h2>
+            <div class="about__container container grid">
+                <div class="about__data">
+                    <p class="about__description">
+                        Paragraph 1
+                      </p><br>
+                      <p class="about__description">
+                        Paragraph 2
+                      </p><br>
+                      <p class="about__description">
+                        Paragraph 3
+                      </p>
+                      <p class="about__description">
+                        Paragraph 4
+                      </p>
+                      <p class="about__description">
+                        Paragraph 5
+                      </p>
+                      <p class="about__description">
+                        Paragraph 6
+                      </p>
+                </div>
+            </div>
+        </section>
+
+
+
+        
+
+        <!-- =============== For responsive page dont touch this =============== -->
+        <section class="work section" id="work">
+            <div class="work__container container grid">
+            </div>
+        </section>
+    </main>
+
+    <!--=============== FOOTER ===============-->
+    <footer class="footer">
+        <div class="footer__container container">
+            <h1 class="footer__title">Tadipatri Uday Kiran Reddy</h1>
+
+            <!-- <ul class="footer__list">
+
+                <li class="footer__item">
+                    <a href="../../index.html" class="footer__link">Home</a>
+                </li>
+                <li class="footer__item">
+                    <a href="../../index.html" class="footer__link">About</a>
+                </li>
+                <li class="footer__item">
+                    <a href="../../index.html" class="footer__link">Projects</a>
+                </li>
+                <li class="footer__item">
+                    <a href="../../index.html" class="footer__link">Publications</a>
+                </li>
+                <li class="footer__item">
+                    <a href="../../index.html" class="footer__link">Blogs</a>
+                </li>
+            </ul> -->
+
+            <ul class="footer__social">
+                <li class="footer__social-item">
+                    <a href="https://github.com/TUdayKiranReddy" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-github footer__social-icon'></i>
+                    </a>
+                </li>
+                <li class="footer__social-item">
+                    <a href="https://www.linkedin.com/in/tadipatri-uday-kiran-reddy/" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-linkedin footer__social-icon'></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+    <script src="../../assets/js/swiper-bundle.min.js"></script>
+    <script src="../../assets/js/mixitup.min.js"></script>
+    <script src="../../assets/js/main.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const canvas = document.getElementById('sineWaveCanvas');
+            const ctx = canvas.getContext('2d');
+            let width, height, centerY;
+            const waves = [
+                { amplitude: 60, frequency: 0.02, phase: 0 },
+                { amplitude: 40, frequency: 0.04, phase: Math.PI / 2 },
+                { amplitude: 20, frequency: 0.16, phase: Math.PI }
+            ];
+
+            const resizeCanvas = () => {
+                width = canvas.width = window.innerWidth;
+                height = canvas.height = window.innerHeight;
+                centerY = height / 2;
+            };
+
+            const drawSineWaves = (time) => {
+                ctx.clearRect(0, 0, width, height);
+                waves.forEach(wave => {
+                    ctx.beginPath();
+                    ctx.moveTo(0, centerY);
+                    for (let x = 0; x < width; x++) {
+                        const y = centerY + wave.amplitude * Math.sin((x + time) * wave.frequency + wave.phase);
+                        ctx.lineTo(x, y);
+                    }
+                    ctx.strokeStyle = '#A396EA';
+                    ctx.lineWidth = 3;
+                    ctx.stroke();
+                });
+            };
+
+            const animate = (time) => {
+                drawSineWaves(time);
+                requestAnimationFrame(animate);
+            };
+
+            resizeCanvas();
+            window.addEventListener('resize', resizeCanvas);
+            requestAnimationFrame(animate);
+
+            // Hide the sine wave animation after 3 seconds
+            setTimeout(() => {
+                canvas.style.display = 'none';
+            }, 1500);
+        });
+    </script>
+</body>
+
+</html>

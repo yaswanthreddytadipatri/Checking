@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== FAVICON ===============-->
+
+
+    <!--=============== BOXICONS ===============-->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <title> Uday's Portfolio </title>
+</head>
+
+<style>
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+    width: 120px;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+.tooltip .tooltiptext {
+   /* Use half of the width (120/2 = 60), to center the tooltip */
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+</style>
+
+<body>
+    <!--=============== HEADER ===============-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            
+            <a href="#" class="nav__logo" >Tadipatri Uday Kiran Reddy</a>
+            
+
+            <div class="nav__menu" class="tooltip">
+                <ul class="nav__list">
+                    <li class="nav__item ">
+                        <a href="#home" class="nav__link" >
+                            <i class='bx bx-home'></i>
+                        </a>
+                    </li>
+
+                    <li class="nav__item ">
+                        <a href="#about" class="nav__link">
+                            <i class='bx bx-user'></i>
+                        </a>
+                    </li>
+
+                    
+
+                    <li class="nav__item">
+                        <a href="#projects" class="nav__link">
+                            <i class='bx bx-briefcase-alt-2'></i>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#publications" class="nav__link">
+                            <i class='bx bx-book'></i>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#blogs" class="nav__link">
+                            <i class='bx bx-message-square-dots'></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!--=============== Dark mode and Light mode convertor ===============-->
+            <i class='bx bx-moon change-theme change-theme-button' id="theme-button"></i>
+
+        </nav>
+    </header>
+
+    <!--=============== MAIN ===============-->
+    <main class="main">
+        <!--=============== HOME ===============-->
+        <section class="home section" id="home">
+            <div class="home__container container grid">
+                <div class="home__data">
+                    <span class="home__greeting">Hello, I'm</span>
+                    <h1 class="home__name" style="font-size: 20px;">Tadipatri Uday Kiran Reddy</h1>
+                    <h3 class="home__education">IIT Hyderabad Kandi, Sangareddy, Telangana, 502285</h3>
+                    <div class="home__button">
+                        <a href="#about" class="button button--ghost" style="font-size: 10px;">About</a>
+                        <a href="#projects" class="button button--ghost" style="font-size: 10px;">Projects</a>
+                        <a href="#publications" class="button button--ghost" style="font-size: 10px;">Publications</a>
+                        <a href="#blogs" class="button button--ghost" style="font-size: 10px;">Blogs</a>
+                    </div>
+                </div>
+
+                <div class="home__handle">
+                    <img src="assets/img/perfil.png" alt="" class="home__img">
+                </div>
+
+                <div class="home__social">
+                    <a href="https://www.linkedin.com/in/tadipatri-uday-kiran-reddy/" target="_blank" class="home__social-link">
+                        <i class='bx bxl-linkedin'></i>
+                    </a>
+                    <a href="https://github.com/TUdayKiranReddy" target="_blank" class="home__social-link">
+                        <i class='bx bxl-github'></i>
+                    </a>
+                </div>
+
+                <a href="#about" class="home__scroll">
+                    <i class='bx bx-mouse home__scroll-icon'></i>
+                    <span class="home__scroll-name">Scroll Down</span>
+                </a>
+            </div>
+        </section>
+
+        <!--=============== ABOUT ===============-->
+        <section class="about section" id="about" style="text-align: justify;">
+            <span class="section__subtitle">My Intro</span>
+            <h2 class="section__title">About Me</h2>
+            <div class="about__container container grid" style="text-align: justify;">
+                <div class="about__data">
+                    <p class="about__description">
+                        As a B.Tech student in Electrical Engineering at IIT Hyderabad, I’m in the home stretch of my academic journey. But let me tell you, the ride has been nothing short of exciting. My passion for solving research problems has fueled my journey thus far, and I have relished every challenge that has come my way. My background in electrical engineering has developed a robust foundation in mathematics and the capability to seamlessly integrate ideas from different disciplines.
+                      </p><br>
+                      <p class="about__description">
+                        My research journey has been a diverse one, covering areas such as speech signal processing, image processing, and the application of stateless blockchain technology. Currently, I am working under the guidance of the legendary <a href="https://people.iith.ac.in/m_vidyasagar/index.html" target="_blank"> Prof. Mathukumali Vidyasagar, FRS</a>, exploring the fascinating intersection of stochastic approximation, reinforcement learning, and convex optimization.
+                      </p><br>
+                      <p class="about__description">
+                        As a member of The Global Partnership on Artificial Intelligence (<a href="https://gpai.ai/" target="_blank">GPAI</a>), I am working towards building an AI community that fosters collaboration and innovation. My diverse background, which encompasses experience in startups (<a href="https://www.drdo.gov.in/" target="_blank">WiSig Networks</a>), government organizations (<a href="https://www.drdo.gov.in/" target="_blank">DRDO</a>), and leading corporations like <a href="https://www.nvidia.com/en-in/" target="_blank">NVIDIA</a> ,has equipped me with a well-rounded perspective that I bring to the table.
+                      </p>
+                      <p class="about__description">
+                        In my quest to make the world a better place, I am an avid supporter of free software and make sure that my contributions to the scientific field are always open-sourced for the world to see. If you’re interested, you can follow my work on <a href="https://scholar.google.com/citations?user=E3vHu8UAAAAJ&hl=en" target="_blank">Google Scholar </a>and <a href="https://github.com/TUdayKiranReddy" target="_blank">GitHub</a>.
+                      </p>
+                      <p class="about__description">
+                        When I’m not working, I love to play cricket, immerse myself in music, and binge-watch TV shows. I’m also an extensive traveler, always eager to explore new places and cultures
+                      </p>
+                      <p class="about__description">
+                        I am looking for Ph.D. opportunities under leading researchers in Optimization or Signal Processing. If my <a href="https://tudaykiranreddy.github.io/assets/pdf/CV.pdf" target="_blank">profile</a> piques your interest, I would be more than happy to connect and explore opportunities.
+                      </p>
+                      <p class="about__description">Credits: Enhanced by ChatGPT3, few words from it</p>
+                      <p class="about__description">"I'm sorry, as an AI language model developed by OpenAI, I do not have personal opinions or the ability to take credit for writing. I was trained on a diverse range of text data to assist users in generating human-like text based on the prompt given to me."</p>
+                      <a download="" href="https://tudaykiranreddy.github.io/assets/pdf/CV.pdf" target="_blank" class="button button--ghost">
+                        Curriculum Vitae
+                    </a>
+                    </div>
+
+                
+            </div>
+        </section>
+
+        
+
+        <!--=============== Projects ===============-->
+        <!-- <section class="skills section" id="projects">
+            <h2 class="section__title">My Projects</h2>
+
+            <div class="skills__container container grid">
+                
+                <div class="skills__content">
+                    <img src="./assets/img/project1.jpeg" alt="project 1">
+                    <h3><a href="https://tudaykiranreddy.github.io/projects/1_project/" style="color: blue;">ieee sp cup 2022</a></h3>
+                    <br><br>
+                    <p>
+                      Synthetic Speech Attribution
+                    </p>
+                </div>
+
+                <div class="skills__content">
+                    <img src="./assets/img/project2.png" alt="project 2">
+                    <h3><a href="https://tudaykiranreddy.github.io/projects/2_project/" style="color: blue;">compactchain</a></h3>
+                    <br><br>
+                    <p>
+                      An efficient UTXO-based blockchain
+                    </p>
+                </div>
+                <div class="skills__content" >
+                    <img src="./assets/img/project3.gif" alt="project 3">
+                    <h3><a href="https://tudaykiranreddy.github.io/projects/2_project/" style="color: blue;">compactchain</a></h3>
+                    <p><br><br>
+                      An efficient UTXO-based blockchain
+                    </p>
+                </div>
+                <div class="skills__content">
+                    <img src="./assets/img/project4.png" alt="project 4">
+                    <h3><a href="https://tudaykiranreddy.github.io/projects/4_project/" style="color: blue;">bsgd</a></h3>
+                    <p><br><br>
+                      Batch Stochastic Gardient Descent
+                    </p>
+                </div>
+        </section> -->
+
+        <!-- ============= Projects ================ -->
+
+        <section class="testimonial section" id="projects">
+            <h2 class="section__title">Projects</h2>
+            <div class="testimonial__container container swiper">
+                <div class="swiper-wrapper">
+                    <div class="testimonial__card swiper-slide">
+                        <img src="./assets/img/project/project1.jpeg" alt="project 1">
+                        <h3 class="testimonial__name"><a href="https://tudaykiranreddy.github.io/projects/1_project/" target="_blank" style="color: blue;">ieee sp cup 2022</a></h3>
+                        <br>
+                        <p class="testimonial__description">
+                            Synthetic Speech Attribution
+                        </p>
+                    </div>
+
+                    <div class="testimonial__card swiper-slide">
+                        <img src="./assets/img/project/project2.png" alt="project 2">
+                        <h3 class="testimonial__name"><a href="https://tudaykiranreddy.github.io/projects/2_project/" target="_blank" style="color: blue;">compactchain</a></h3>
+                        <br>
+                        <p class="testimonial__description">
+                            An efficient UTXO-based blockchain
+                        </p>
+                    </div>
+
+                    <div class="testimonial__card swiper-slide">
+                        <img src="./assets/img/project/project3.gif" alt="project 3">
+                        <h3 class="testimonial__name"><a href="https://tudaykiranreddy.github.io/projects/4_project/" target="_blank" style="color: blue;">bsgd</a></h3>
+                        <br>
+                        <p class="testimonial__description">
+                            Batch Stochastic Gradient Descent
+                        </p>
+                    </div>
+
+                    <div class="testimonial__card swiper-slide">
+                        <img src="./assets/img/project/project4.png" alt="project 4">
+                        <h3 class="testimonial__name"><a href="https://tudaykiranreddy.github.io/projects/6_project/" target="_blank" style="color: blue;">speech translation with prosody modification</a></h3>
+                        <br>
+                        <p class="testimonial__description">
+                            Translating speechs to target language without loss of prosody
+                        </p>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+        </section>
+
+
+        <!--=============== Publications ===============-->
+        <section class="testimonial section" id="publications">
+            <h2 class="section__title">Publications</h2>
+            <h3 class="section__subtitle">Research articles in the chronological order.</h3><br>
+
+            <div class="testimonial__container container swiper">
+                <div class="swiper-wrapper">
+                    <div class="testimonial__card swiper-slide">
+                        <h3 class="testimonial__name">2022 <br> <br>Evince the artefacts of Spoof speech by blending the Voice Source and Vocal Tract Features</h3>
+                        <br>
+                        <p class="testimonial__description">
+                            *T Uday Kiran Reddy Reddy*, S Chaitanya Varun, K Pranav Kumar, and S Sreekanth, K Sri Rama Murthy
+                        Pre-Print at ArXiv, 2022
+                        </p>
+                    </div>
+
+                    <div class="testimonial__card swiper-slide">
+
+                        <h3 class="testimonial__name">2023 <br> <br>Convergence of Batch Stochastic Gradient Descent Methods with Approximate Gradients and/or Noisy Measurements: Theory and Computational Results</h3>
+                        <br>
+                        <p class="testimonial__description">
+                            *Tadipatri Uday Kiran Reddy*, and <a href="https://en.wikipedia.org/wiki/Mathukumalli_Vidyasagar" target="_blank">M. Vidyasagar</a>
+                        Submitted to ICML, 2023
+                        </p>
+                    </div>
+
+                    <div class="testimonial__card swiper-slide">
+
+                        <h3 class="testimonial__name">2023 <br> <br>CompactChain: An Eficient Stateless Chain for UTXO-model Blockchain</h3>
+                        <br>
+                        <p class="testimonial__description">
+                            B Swaroopa Reddy, and *T Uday Kiran Reddy*
+                        Springer Frontiers of Computer Science, 2023
+                        </p>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+        </section>
+
+        <!--=============== Blogs ===============-->
+        <section class="services section" id="blogs">
+
+            <h2 class="section__title">My Blogs</h2>
+
+            <div class="services__container container grid">
+                <div class="services__card">
+                    <div class="serv">
+                        <h3 class="services__title">Blog 1</h3>
+
+                        <span class="services__button">
+                            See More <i class='bx bx-right-arrow services__icon'></i>
+                        </span>
+                    </div>
+
+
+                    <div class="services__modal">
+                        <div class="services__modal-content">
+                            <i class='bx bx-x services__modal-close'></i>
+
+                            <h3 class="services__modal-title">Heading of blog</h3>
+
+                            <p class="services__modal-description">
+                                Content
+                            </p>
+                            <!-- ==================== Blog page ================== -->
+                            <a href="./pages/blogs/blog1.html" target="_blank">Link for full blog</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="services__card">
+                    <h3 class="services__title">Blog 2</h3>
+
+                    <span class="services__button">
+                        See More <i class='bx bx-right-arrow services__icon'></i>
+                    </span>
+
+                    <div class="services__modal">
+                        <div class="services__modal-content">
+                            <i class='bx bx-x services__modal-close'></i>
+
+                            <h3 class="services__modal-title">Heading of blog</h3>
+
+                            <p class="services__modal-description">
+                                Content
+                            </p>
+                            <!-- ==================== Blog page ================== -->
+                            <a href="./pages/blogs/blog2.html" target="_blank">Link for full blog</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="services__card">
+                    <h3 class="services__title">Blog 3</h3>
+
+                    <span class="services__button">
+                        See More <i class='bx bx-right-arrow services__icon'></i>
+                    </span>
+
+                    <div class="services__modal">
+                        <div class="services__modal-content">
+                            <i class='bx bx-x services__modal-close'></i>
+
+                            <h3 class="services__modal-title">Heading of blog</h3>
+
+                            <p class="services__modal-description">
+                                Content
+                            </p>
+                            <!-- ==================== Blog page ================== -->
+                            <a href="./pages/blogs/blog3.html" target="_blank">Link for full blog</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =============== For responsive page dont touch this =============== -->
+        <section class="work section" id="work">
+            <div class="work__container container grid">
+            </div>
+        </section>
+    </main>
+
+    <!--=============== FOOTER ===============-->
+    <footer class="footer">
+        <div class="footer__container container">
+            <h1 class="footer__title">Tadipatri Uday Kiran Reddy</h1>
+
+            <!-- <ul class="footer__list">
+
+                <li class="footer__item">
+                    <a href="#home" class="footer__link">Home</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#about" class="footer__link">About</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#projects" class="footer__link">Projects</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#publications" class="footer__link">Publications</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#blogs" class="footer__link">Blogs</a>
+                </li>
+            </ul> -->
+
+            <ul class="footer__social">
+                <li class="footer__social-item">
+                    <a href="https://github.com/TUdayKiranReddy" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-github footer__social-icon'></i>
+                    </a>
+                </li>
+                <li class="footer__social-item">
+                    <a href="https://www.linkedin.com/in/tadipatri-uday-kiran-reddy/" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-linkedin footer__social-icon'></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/mixitup.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
