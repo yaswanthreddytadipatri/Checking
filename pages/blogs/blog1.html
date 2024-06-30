@@ -59,10 +59,10 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
   height: 100%;
   z-index: 9999;
   background-color: rgba(30, 30, 30, 0.9);
+  overflow: hidden;
 }
 </style>
 
@@ -149,7 +149,7 @@
         <div class="footer__container container">
             <h1 class="footer__title">Tadipatri Uday Kiran Reddy</h1>
 
-            <!-- <ul class="footer__list">
+            <ul class="footer__list">
 
                 <li class="footer__item">
                     <a href="../../index.html" class="footer__link">Home</a>
@@ -166,7 +166,7 @@
                 <li class="footer__item">
                     <a href="../../index.html" class="footer__link">Blogs</a>
                 </li>
-            </ul> -->
+            </ul>
 
             <ul class="footer__social">
                 <li class="footer__social-item">
@@ -204,34 +204,36 @@
                 centerY = height / 2;
             };
 
-            const drawSineWaves = (time) => {
+            const drawSineWaves = (time, progress) => {
                 ctx.clearRect(0, 0, width, height);
                 waves.forEach(wave => {
                     ctx.beginPath();
                     ctx.moveTo(0, centerY);
-                    for (let x = 0; x < width; x++) {
+                    for (let x = 0; x < width * progress; x++) {
                         const y = centerY + wave.amplitude * Math.sin((x + time) * wave.frequency + wave.phase);
                         ctx.lineTo(x, y);
                     }
                     ctx.strokeStyle = '#A396EA';
-                    ctx.lineWidth = 3;
+                    ctx.lineWidth = 2;
                     ctx.stroke();
                 });
             };
 
             const animate = (time) => {
-                drawSineWaves(time);
-                requestAnimationFrame(animate);
+                const progress = Math.min((Date.now() - startTime) / duration, 1);
+                drawSineWaves(time, progress);
+                if (progress < 1) {
+                    requestAnimationFrame(animate);
+                } else {
+                    canvas.style.display = 'none';
+                }
             };
 
             resizeCanvas();
             window.addEventListener('resize', resizeCanvas);
+            const startTime = Date.now();
+            const duration = 3000; // 3 seconds
             requestAnimationFrame(animate);
-
-            // Hide the sine wave animation after 3 seconds
-            setTimeout(() => {
-                canvas.style.display = 'none';
-            }, 1500);
         });
     </script>
 </body>
